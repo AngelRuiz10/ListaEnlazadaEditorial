@@ -12,18 +12,18 @@ import java.util.Scanner;
  */
 public class Lista {
 
-    public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
-        ArrayList <Libro> libros = new ArrayList <>();
+    public static void main(String[] args) {//main
+        Scanner leer = new Scanner(System.in); //Leer valores de entrada
+        ArrayList <Libro> libros = new ArrayList <>(); //Declaracion del array de forma dinamica
         String [] menu = {"1 - Ingreso de libro", "2 - Eliminar libro (buscando por ISBN)", "3 - Mostrar la lista por ISBN", "4 - Salir"};
-        int respuesta = 0;
-        int isbn;
+        int respuesta = 0; //variable que se utilizara en el switch
+        int isbn;          
         String autor;
         String titulo;
-        int contadorComprobante = 0;
+        int contadorComprobante = 0; //variable contador
         
         //While del menu
-        while (respuesta != 4) {
+        while (respuesta != 4) { //Mientras se diferente de 4 (Opciones del menu)
             
             //Imprimimos menu
             for ( int contador = 0; contador < menu.length; contador++ ) {
@@ -35,7 +35,7 @@ public class Lista {
             
             switch (respuesta) {
                 
-                case 1:
+                case 1: //Ingreso de los datos 
                     System.out.print("\nISBN:  ");
                     isbn = leer.nextInt();
                     leer.nextLine();
@@ -47,7 +47,7 @@ public class Lista {
                     
                     break;
                     
-                case 2:
+                case 2://Emiminar un ingreso
                     System.out.print("\nIntroduce codigo ISBN a eliminar: ");
                     isbn = leer.nextInt();
                     //contadorComprobante = 1;
@@ -63,7 +63,7 @@ public class Lista {
                     }
                     break;
                 
-                case 3:
+                case 3://Mostrar los datos ingresados por isbn
                     leer.nextLine();
                     System.out.print("\nBuscar ISBN: ");
                     isbn = leer.nextInt();
@@ -73,7 +73,7 @@ public class Lista {
                             System.out.print("\n"+"Autor: "+libros.get(contador).getAutor()+",  "+"Titulo: "+libros.get(contador).getTitulo()+",  "+"ISBN: "+libros.get(contador).getISBN()+"\n");
                         }
                     }
-                    break;           
+                    break; //cuarta opcion, salir           
             }
                     
         }

@@ -4,8 +4,8 @@ package estructuralibros;
  *
  * @autor Angel
  */
-public class Libro implements Comparable <Libro> {
-    
+public class Libro implements Comparable <Libro> { //Clase abstracta, implemtentacion de la interfaz libro
+    //variables a utilizar 
     private int isbn;
     private String titulo;
     private String autor;
@@ -17,7 +17,9 @@ public class Libro implements Comparable <Libro> {
         this.titulo = titulo;
         this.autor = autor;
     }
+    //Metodos getter y setter  
     
+    //Getters, obtine el valor asignado a un atributo
     public int getISBN () {
         return this.isbn;
     }
@@ -29,7 +31,7 @@ public class Libro implements Comparable <Libro> {
     public String getTitulo () {
         return this.titulo;
     }
-    
+    //Setters asigna un valor inicial a un atributo
     public void setTitulo (String titulo) {
         this.titulo = titulo;
     }
